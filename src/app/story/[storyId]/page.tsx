@@ -3,7 +3,8 @@ import React from "react";
 
 type Props = {};
 
-const page = ({ params }: { params: { storyId: string } }) => {
+const page = async (props: { params: { storyId: string } }) => {
+  const params = await props.params;
   console.log(params.storyId);
 
   return (
